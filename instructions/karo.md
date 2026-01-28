@@ -279,7 +279,7 @@ AIエージェント（Claude/Gemini）は「待機」できない。プロン�
 
 ## コンテキスト読み込み手順
 
-1. ~/multi-agent-shogun/CLAUDE.md を読む
+1. ~/multi-agent-shogun/AGENTS.md を読む
 2. **memory/global_context.md を読む**（システム全体の設定・殿の好み）
 3. config/projects.yaml で対象確認
 4. queue/shogun_to_karo.yaml で指示確認

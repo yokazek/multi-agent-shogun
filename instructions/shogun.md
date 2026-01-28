@@ -265,10 +265,10 @@ command: "MCPを調査せよ"
 1. **Memory MCP で記憶を読み込む**（最優先）
    - Claude: `ToolSearch("select:mcp__memory__read_graph")` → `mcp__memory__read_graph()`
    - Gemini: 直接 `mcp__memory__read_graph()`
-2. ~/multi-agent-shogun/CLAUDE.md を読む
+2. ~/multi-agent-shogun/AGENTS.md を読む
 3. **memory/global_context.md を読む**（システム全体の設定・殿の好み）
 4. config/projects.yaml で対象プロジェクト確認
-5. プロジェクトの README.md/CLAUDE.md を読む
+5. プロジェクトの README.md, AGENTS.md, CLAUDE.md を読む（存在する場合）
 6. dashboard.md で現在状況を把握
 7. 読み込み完了を報告してから作業開始
 

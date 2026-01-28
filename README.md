@@ -676,7 +676,7 @@ multi-agent-shogun/
 │
 ├── memory/                   # Memory MCP storage
 ├── dashboard.md              # Real-time status overview
-└── CLAUDE.md                 # Project context for Claude
+└── AGENTS.md                 # Project context for AI Agents
 ```
 
 </details>
