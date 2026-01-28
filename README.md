@@ -16,6 +16,18 @@
 
 ---
 
+## ⚠️ Security Warning
+
+**Use at your own risk.**
+
+This system uses the `--dangerously-skip-permissions` (Claude Code) and `--yolo` (Gemini CLI) flags to enable autonomous operation. This means the AI agents can execute system commands and modify files **without user confirmation**.
+
+- **Potential Risks**: Accidental deletion of files, execution of harmful commands, or prompt injection attacks if processing untrusted content.
+- **Recommendation**: Always run this system in an isolated environment (Sandboxed WSL2, Virtual Machine, or Docker container) that does not contain sensitive personal data or critical system files.
+- **Responsibility**: The user assumes all responsibility for any damage or data loss caused by the use of this software.
+
+---
+
 ## What is this?
 
 **multi-agent-shogun** is a system that runs multiple Claude Code instances simultaneously, organized like a feudal Japanese army.
