@@ -306,8 +306,13 @@ log_step "STEP 6: 設定ファイル確認"
 
 # config/settings.yaml
 if [ ! -f "$SCRIPT_DIR/config/settings.yaml" ]; then
-    log_info "config/settings.yaml を作成中..."
-    cat > "$SCRIPT_DIR/config/settings.yaml" << 'EOF'
+    if [ -f "$SCRIPT_DIR/config/settings.example.yaml" ]; then
+        log_info "settings.example.yaml から設定ファイルをコピー中..."
+        cp "$SCRIPT_DIR/config/settings.example.yaml" "$SCRIPT_DIR/config/settings.yaml"
+        log_success "settings.yaml を作成しました"
+    else
+        log_warn "settings.example.yaml が見つかりません。デフォルト設定で作成します。"
+        cat > "$SCRIPT_DIR/config/settings.yaml" << 'EOF'
 # multi-agent-shogun 設定ファイル
 
 # エージェント設定
@@ -331,12 +336,20 @@ skill:
   # ローカルスキル保存先（このプロジェクト専用）
   local_path: "~/multi-agent-shogun/skills/"
 
+# スクリーンショット設定
+screenshot:
+  # Windows側パス（参考用）
+  windows_path: "C:\\Users\\{{USERNAME}}\\Pictures\\Screenshots"
+  # WSL側パス（実際に使用）
+  path: "/mnt/c/Users/{{USERNAME}}/Pictures/Screenshots"
+
 # ログ設定
 logging:
   level: info  # debug | info | warn | error
   path: "~/multi-agent-shogun/logs/"
 EOF
-    log_success "settings.yaml を作成しました"
+        log_success "settings.yaml を作成しました"
+    fi
 else
     log_info "config/settings.yaml は既に存在します"
 fi

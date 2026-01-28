@@ -19,9 +19,10 @@ demo_output/
 
 # Runtime data (generated during operation)
 output/
-queue/research/
-queue/tasks/
-queue/reports/
+queue/
+
+# Configuration
+config/settings.yaml
 
 # Memory MCP data (local to each installation)
 memory/
